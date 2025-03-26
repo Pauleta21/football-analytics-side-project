@@ -8,6 +8,5 @@ This project will explore various techniques in data analysis and machine learni
 
 ## Key Focus Areas:
 - Cleaning and exploring player performance data
-- Machine learning models for performance prediction
-- Feature engineering and advanced analytics
+- Machine learning models for obtaining different predictions, related to player performance metrics
 - Deployment of models and insights for real-world applications
