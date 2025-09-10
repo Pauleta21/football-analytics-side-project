@@ -34,22 +34,22 @@ logger = get_logger()
 # using try-except block to stop the app if not loading the models
 try:
     goals_model = pickle.load(open("goals_model.pkl", "rb"))
-    logger.info("✅ Goals model loaded successfully")
+    logger.info("Goals model loaded successfully")
 
     assists_model = pickle.load(open("assists_model.pkl", "rb"))
-    logger.info("✅ Assists model loaded successfully")
+    logger.info("Assists model loaded successfully")
 
     similar_model = pickle.load(open("similar_players_model.pkl", "rb"))
-    logger.info("✅ Similar players model loaded successfully")
+    logger.info("Similar players model loaded successfully")
 
     performance_model = pickle.load(open("performance_model.pkl", "rb"))
-    logger.info("✅ Performance model loaded successfully")
+    logger.info("Performance model loaded successfully")
 
     players_df = pd.read_csv("players.csv")
-    logger.info(f"✅ players.csv loaded successfully, shape={players_df.shape}")
+    logger.info(f"File players.csv loaded successfully, shape={players_df.shape}")
 
 except Exception as e:
-    logger.error("❌ Error loading models or dataset", exc_info=True)
+    logger.error("Error loading models or dataset", exc_info=True)
     raise e  # stop app if models don’t load
 
 #init the app
