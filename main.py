@@ -33,19 +33,19 @@ logger = get_logger()
 # using logger to show info about what is happening)
 # using try-except block to stop the app if not loading the models
 try:
-    goals_model = pickle.load(open("goals_model.pkl", "rb"))
+    goals_model = pickle.load(open("models/goals_model.pkl", "rb"))
     logger.info("Goals model loaded successfully")
 
-    assists_model = pickle.load(open("assists_model.pkl", "rb"))
+    assists_model = pickle.load(open("models/assists_model.pkl", "rb"))
     logger.info("Assists model loaded successfully")
 
-    similar_model = pickle.load(open("similar_players_model.pkl", "rb"))
+    similar_model = pickle.load(open("models/similar_players_model.pkl", "rb"))
     logger.info("Similar players model loaded successfully")
 
-    performance_model = pickle.load(open("performance_model.pkl", "rb"))
+    performance_model = pickle.load(open("models/performance_model.pkl", "rb"))
     logger.info("Performance model loaded successfully")
 
-    players_df = pd.read_csv("players.csv")
+    players_df = pd.read_csv("data/players.csv")
     logger.info(f"File players.csv loaded successfully, shape={players_df.shape}")
 
 except Exception as e:
